@@ -23,7 +23,7 @@ export default function Weather() {
               <input className="city-input" placeholder="Enter your city" />
               <button className="search-button"></button>
             </form>
-            <div className="date">{weatherData.date}</div>
+            <div className="date">{weatherData.date} (UTC+8) </div>
           </div>
 
           <h1>
