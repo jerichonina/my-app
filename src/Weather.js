@@ -107,24 +107,25 @@ export default function Weather() {
             <hr />
             <div className="weatherForecast"></div>
           </h3>
-
-          <small className="coder">
-            <a
-              href="https://github.com/jerichonina/my-weather-app/tree/main"
-              target="blank"
-            >
-              Open source code
-            </a> 
-            by Jericho Li 👩🏻‍💻
-            <div>
-              Animated weather icons designed by
-              <a href="https://bas.dev" target="blank">
-                Bas Milius.
-              </a>
-            </div>
-          </small>
         </div>
       </div>
+      <h4>
+        <small className="coder">
+          <a
+            href="https://github.com/jerichonina/my-weather-app/tree/main"
+            target="blank"
+          >
+            Open source code
+          </a>
+          by Jericho Li 👩🏻‍💻
+          <div>
+            Animated weather icons designed by
+            <a href="https://bas.dev" target="blank">
+              Bas Milius.
+            </a>
+          </div>
+        </small>
+      </h4>
     </div>
   );
 }
