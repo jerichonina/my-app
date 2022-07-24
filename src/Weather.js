@@ -109,23 +109,21 @@ export default function Weather() {
           </h3>
         </div>
       </div>
-      <h4>
         <small className="coder">
           <a
             href="https://github.com/jerichonina/my-weather-app/tree/main"
             target="blank"
           >
             Open source code
-          </a>
-          by Jericho Li 👩🏻‍💻
+          </a> |
+            Jericho Li 👩🏻‍💻
           <div>
-            Animated weather icons designed by
+            Animated weather icons designed  by
             <a href="https://bas.dev" target="blank">
               Bas Milius.
             </a>
           </div>
         </small>
-      </h4>
     </div>
   );
 }
