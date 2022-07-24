@@ -44,8 +44,9 @@
 
 .Weather .date {
   text-align: center;
+  font-size: 18px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(100, 84, 84);
+  color: rgb(107, 93, 93);
 }
 
 .Weather h1 {
@@ -72,13 +73,14 @@
 }
 
 .Weather .weather-widget {
-  margin-top: -20px;
-  margin-right: -10px;
-  width: 120px;
+  margin-top: -35px;
+  margin-right: -8px;
+   vertical-align: middle;
+  width: 100px;
 }
 
 .Weather .temperature {
-  font-size: 68px;
+  font-size: 74px;
   vertical-align: middle;
 }
 
@@ -86,11 +88,11 @@
   position: relative;
   font-size: 18px;
   top: -30px;
-  margin-left: -15px;
+  margin-left: -5px;
 }
 
 .Weather .fahrenheit-link {
-  color: rgb(73, 52, 52);
+  color: rgb(55, 118, 190);
 }
 
 .Weather a {
@@ -120,7 +122,7 @@
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   color: rgb(73, 52, 52);
-  line-height: 22px;
+  line-height: 20px;
 }
 
 .Weather .forecast-header {
@@ -138,7 +140,7 @@
 
 .Weather h3 {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 16px;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
@@ -149,10 +151,4 @@
 .Weather .weatherForecast {
   text-align: center;
   display: block;
-}
-
-.Weather .coder {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(73, 52, 52);
-  line-height: 10px;
 }

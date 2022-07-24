@@ -114,7 +114,7 @@ export default function Weather() {
               target="blank"
             >
               Open source code
-            </a>
+            </a> 
             by Jericho Li 👩🏻‍💻
             <div>
               Animated weather icons designed by
