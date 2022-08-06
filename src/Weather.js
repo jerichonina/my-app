@@ -20,7 +20,11 @@ export default function Weather() {
         <div className="Weather">
           <div className="search-form">
             <form className="search-bar">
-              <input className="city-input" placeholder="Enter your city" />
+              <input
+                className="city-input"
+                placeholder="Enter your city"
+                autoFocus="on"
+              />
               <button className="search-button"></button>
             </form>
             <div className="date">{weatherData.date} (UTC+8) </div>
@@ -41,12 +45,14 @@ export default function Weather() {
             />
             <span className="temperature">{weatherData.cityTemp}</span>
             <span className="temperature-icon">
-              <a href="/">°C </a>|<a href="/">°F </a>
+              <span className="celcius-icon">
+                <a href="/">°C </a>
+              </span>
+              | <a href="/">°F </a>
             </span>
           </h2>
 
           <div className="weather-details">
-            <div className="row g-3">
               <div className="col-6 feels-like-temp">
                 <div className="p-1 border">
                   <strong>Feels Like</strong>
@@ -95,7 +101,6 @@ export default function Weather() {
                 </div>
               </div>
             </div>
-          </div>
 
           <h3>
             <div className="forecast-header">
@@ -109,21 +114,21 @@ export default function Weather() {
           </h3>
         </div>
       </div>
-        <small className="coder">
-          <a
-            href="https://github.com/jerichonina/my-weather-app/tree/main"
-            target="blank"
-          >
-            Open source code {" "}
-          </a> 
-            Jericho Li 👩🏻‍💻
-          <div>
-            Animated weather icons designed  by {" "}
-            <a href="https://bas.dev" target="blank">
-              Bas Milius.
-            </a>
-          </div>
-        </small>
+      <small className="coder">
+        <a
+          href="https://github.com/jerichonina/my-weather-app/tree/main"
+          target="blank"
+        >
+          Open source code{" "}
+        </a>
+        Jericho Li 👩🏻‍💻
+        <div>
+          Animated weather icons designed by{" "}
+          <a href="https://bas.dev" target="blank">
+            Bas Milius.
+          </a>
+        </div>
+      </small>
     </div>
   );
 }

@@ -44,9 +44,9 @@
 
 .Weather .date {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(107, 93, 93);
+  color: rgb(100, 84, 84);
 }
 
 .Weather h1 {
@@ -68,31 +68,33 @@
 .Weather h2 {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  font-size:68px;
   text-align: center;
   color: rgb(55, 118, 190);
+  margin-top:5px;
 }
 
 .Weather .weather-widget {
   margin-top: -35px;
   margin-right: -8px;
    vertical-align: middle;
+  display: inline-block;
   width: 100px;
 }
 
 .Weather .temperature {
   font-size: 74px;
-  vertical-align: middle;
+  display:inline-block
 }
 
 .Weather .temperature-icon {
   position: relative;
   font-size: 18px;
-  top: -30px;
-  margin-left: -5px;
+  top: -40px;
 }
 
-.Weather .fahrenheit-link {
-  color: rgb(55, 118, 190);
+.Weather .celcius-icon {
+  color: rgb(67, 128, 199);
 }
 
 .Weather a {
