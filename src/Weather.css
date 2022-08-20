@@ -111,19 +111,19 @@
 }
 
 .Weather .border {
-  border-radius: 60px;
-  box-shadow: 1px 1px 0.8px rgb(78, 75, 75);
+  border-radius: 65px;
+  box-shadow: 1.5px 1px 1px rgb(37, 36, 36);
 }
 
 .Weather .feels-like-temp,
 .Weather .humidity-level,
-.Weather .UV-index,
+.Weather .pressure-index,
 .Weather .wind-speed {
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  color: rgb(73, 52, 52);
+  color: rgb(41, 32, 32);
   line-height: 20px;
 }
 
