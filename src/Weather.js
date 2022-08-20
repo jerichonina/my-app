@@ -64,7 +64,7 @@ return (
         <div className="weather-details">
           <div class="row g-3">
             <div className="col-6 feels-like-temp">
-              <div className="p-0.8 border">
+              <div class="p-0.8 border">
                 <strong>Feels Like</strong>
                 <br />
                 <span className="feels_like"></span>
@@ -73,7 +73,7 @@ return (
             </div>
 
             <div className="col-6 humidity-level">
-              <div className="p-0.8 border">
+              <div class="p-0.8 border">
                 <strong>Humidity</strong>
                 <br />
                 <span className="humidity"></span>
@@ -82,7 +82,7 @@ return (
             </div>
           
             <div className="col-6 pressure-index">
-              <div className="p-0.8 border">
+              <div class="p-0.8 border">
                 <strong>Pressure</strong>
                 <br />
                 <span className="pressure"></span>
@@ -91,7 +91,7 @@ return (
             </div>
 
             <div className="col-6 wind-speed">
-              <div className="p-0.8 border">
+              <div class="p-0.8 border">
                 <strong>Wind</strong>
                 <br />
                 <span className="wind"></span>
