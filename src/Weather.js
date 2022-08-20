@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CurrentDate from "./CurrentDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -12,7 +13,7 @@ export default function Weather(props) {
        ready:true,
        description:response.data.weather[0].description,
        temperature: response.data.main.temp,
-       date: "Saturday",
+       date: new Date(response.data.dt*1000),
        wind: response.data.wind.speed,
        city: response.data.name,
        humidity: response.data.main.humidity,
@@ -36,7 +37,7 @@ return (
             />
             <button className="search-button"></button>
           </form>
-          <div className="date">{weatherData.date}</div>
+          <div className="date"><CurrentDate date={weatherData.date} /></div>
         </div>
 
         <h1>
