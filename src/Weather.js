@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import bootstrap from "bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Weather.css";
 
