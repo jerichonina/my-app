@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function CurrentDate(props) {
- return "Saturday 13:27";
+    let day = props.data.getDay();
+    let hours = props.data.getHours();
+    let minutes = props.data.getMinutes();
+ return (
+     <div> {day} {hours}:{minutes} </div>
+ );
 }
 
