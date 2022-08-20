@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import axios from "axios";
-import bootstrap from "bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -18,6 +16,7 @@ export default function Weather(props) {
        city: response.data.name,
        humidity: response.data.main.humidity,
        feels_like:response.data.main.feels_like,
+       pressure:response.data.main.pressure,
        imgUrl: "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg",
      });
   }
@@ -50,7 +49,9 @@ return (
             alt="weather-widget"
             className="weather-widget"
           />
-          <span className="temperature">{Math.round(weatherData.temperature)}</span>
+          <span className="temperature">
+            {Math.round(weatherData.temperature)}
+          </span>
           <span className="temperature-icon">
             <span className="celcius-icon">
               <a href="/">°C </a>
@@ -60,51 +61,41 @@ return (
         </h2>
 
         <div className="weather-details">
-          <div className="col-6 feels-like-temp">
-            <div className="p-1 border">
-              <strong>Feels Like</strong>
-              <br />
-              <span className="icon1">
-                <i className="fa-solid fa-temperature-half fa-lg"></i>
-              </span>
-              <span className="feels_like"></span>
-              {Math.round(weatherData.feels_like)}°C
+          <div class="row">
+            <div className="col-6 feels-like-temp">
+              <div className="p-1 border">
+                <strong>Feels Like</strong>
+                <br />
+                <span className="feels_like"></span>
+                {Math.round(weatherData.feels_like)}°C
+              </div>
             </div>
-          </div>
 
-          <div className="col-6 humidity-level">
-            <div className="p-1 border">
-              <strong>Humidity</strong>
-              <br />
-              <span className="icon2">
-                <i className="fa-solid fa-droplet fa-lg"></i>
-              </span>
-              <span className="humidity"></span>
-              {weatherData.humidity}%
+            <div className="col-6 humidity-level">
+              <div className="p-1 border">
+                <strong>Humidity</strong>
+                <br />
+                <span className="humidity"></span>
+                {weatherData.humidity}%
+              </div>
             </div>
-          </div>
 
-          <div className="col-6 UV-index">
-            <div className="p-1 border">
-              <strong>UV Index</strong>
-              <br />
-              <span className="icon3">
-                <i className="fa-solid fa-sun fa-lg"></i>
-              </span>
-              <span className="sunray"></span>
-              {weatherData.sunray}
+            <div className="col-6 UV-index">
+              <div className="p-1 border">
+                <strong>Pressure</strong>
+                <br />
+                <span className="pressure"></span>
+                {weatherData.pressure}
+              </div>
             </div>
-          </div>
 
-          <div className="col-6 wind-speed">
-            <div className="p-1 border">
-              <strong>Wind</strong>
-              <br />
-              <span className="icon4">
-                <i className="fa-solid fa-wind fa-lg"></i>
-              </span>
-              <span className="wind"></span>
-              {Math.round(weatherData.wind)} km/h
+            <div className="col-6 wind-speed">
+              <div className="p-1 border">
+                <strong>Wind</strong>
+                <br />
+                <span className="wind"></span>
+                {Math.round(weatherData.wind)} km/h
+              </div>
             </div>
           </div>
         </div>
