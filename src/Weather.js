@@ -36,7 +36,9 @@ return (
             />
             <button className="search-button"></button>
           </form>
-          <div className="date"><CurrentDate date={weatherData.date} /></div>
+          <div className="date">
+            <CurrentDate date={weatherData.date} />
+          </div>
         </div>
 
         <h1>
@@ -62,13 +64,15 @@ return (
         </h2>
 
         <div className="weather-details">
-          <div class="row g-3">
+          <div className="row g-3">
             <div className="col-6 feels-like-temp">
               <div className="p-0.8 border">
                 <strong>Feels Like</strong>
                 <br />
-                <span className="feels_like"></span>
-                {Math.round(weatherData.feels_like)}°C
+                <span className="feels_like">
+                  {" "}
+                  {Math.round(weatherData.feels_like)}°C
+                </span>
               </div>
             </div>
 
@@ -76,17 +80,15 @@ return (
               <div className="p-0.8 border">
                 <strong>Humidity</strong>
                 <br />
-                <span className="humidity"></span>
-                {weatherData.humidity}%
+                <span className="humidity"> {weatherData.humidity}%</span>
               </div>
             </div>
-          
+
             <div className="col-6 pressure-index">
               <div className="p-0.8 border">
                 <strong>Pressure</strong>
                 <br />
-                <span className="pressure"></span>
-                {weatherData.pressure}
+                <span className="pressure"> {weatherData.pressure}</span>
               </div>
             </div>
 
@@ -94,8 +96,9 @@ return (
               <div className="p-0.8 border">
                 <strong>Wind</strong>
                 <br />
-                <span className="wind"></span>
-                {Math.round(weatherData.wind)} km/h
+                <span className="wind">
+                  {Math.round(weatherData.wind)} km/h
+                </span>
               </div>
             </div>
           </div>
