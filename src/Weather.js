@@ -34,7 +34,9 @@ return (
               placeholder="Enter your city"
               autoFocus="on"
             />
-            <button className="search-button"></button>
+            <button className="search-button">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
           </form>
           <div className="date">
             <CurrentDate date={weatherData.date} />
