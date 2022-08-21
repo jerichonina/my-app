@@ -6,6 +6,7 @@ import { FaTemperatureLow } from "react-icons/fa";
 import { FaWind } from "react-icons/fa";
 import { FaWater} from "react-icons/fa";
 import { FaCompress} from "react-icons/fa";
+import { FaCalendar} from "react-icons/fa";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -41,7 +42,7 @@ return (
             />
             <button className="search-button">
               <strong className="search-icon">
-                <FaSistrix size="2em" color="grey"/>
+                <FaSistrix size="2em" color="grey" />
               </strong>
             </button>
           </form>
@@ -78,7 +79,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Feels Like</strong>
                 <br />
-                <FaTemperatureLow />
+                <FaTemperatureLow /> {" "}
                 <span className="feels_like">
                   {" "}
                   {Math.round(weatherData.feels_like)}°C
@@ -90,7 +91,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Humidity</strong>
                 <br />
-               <FaWater />
+                <FaWater />
                 <span className="humidity"> {weatherData.humidity}%</span>
               </div>
             </div>
@@ -108,7 +109,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Wind</strong>
                 <br />
-                <FaWind />
+                <FaWind /> {" "}
                 <span className="wind">
                   {Math.round(weatherData.wind)} km/h
                 </span>
@@ -122,6 +123,7 @@ return (
             <span>
               <i className="fa-solid fa-calendar-days fa-sm"></i>
             </span>
+            <FaCalendar /> {" "}
             6-Day Forecast
           </div>
           <hr />
