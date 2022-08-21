@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
 import { FaSistrix } from "react-icons/fa";
+import { FaTemperatureLow } from "react-icons/fa";
+import { FaWind } from "react-icons/fa";
+import { FaWater} from "react-icons/fa";
+import { FaCompress} from "react-icons/fa";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -37,12 +41,12 @@ return (
             />
             <button className="search-button">
               <strong className="search-icon">
-                <FaSistrix />
+                <FaSistrix size="2em" color="grey"/>
               </strong>
             </button>
           </form>
           <div className="date">
-            <CurrentDate date={weatherData.date} />
+            <CurrentDate date={weatherData.date} /> (GMT+8)
           </div>
         </div>
 
@@ -74,6 +78,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Feels Like</strong>
                 <br />
+                <FaTemperatureLow />
                 <span className="feels_like">
                   {" "}
                   {Math.round(weatherData.feels_like)}°C
@@ -85,6 +90,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Humidity</strong>
                 <br />
+               <FaWater />
                 <span className="humidity"> {weatherData.humidity}%</span>
               </div>
             </div>
@@ -93,6 +99,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Pressure</strong>
                 <br />
+                <FaCompress />
                 <span className="pressure"> {weatherData.pressure}</span>
               </div>
             </div>
@@ -101,6 +108,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Wind</strong>
                 <br />
+                <FaWind />
                 <span className="wind">
                   {Math.round(weatherData.wind)} km/h
                 </span>
