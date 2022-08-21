@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
+import { FaSistrix } from "react-icons/fa";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -35,7 +36,9 @@ return (
               autoFocus="on"
             />
             <button className="search-button">
-              <i className="fa-solid fa-magnifying-glass"></i>
+              <strong className="search-icon">
+                <FaSistrix />
+              </strong>
             </button>
           </form>
           <div className="date">
