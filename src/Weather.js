@@ -10,6 +10,7 @@ import { FaCalendar} from "react-icons/fa";
 import "./Weather.css";
 
 export default function Weather(props) {
+  const [city, setCity] = useState (props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready : false});
   function submitResponse(response){
     console.log(response.data);
@@ -28,17 +29,33 @@ export default function Weather(props) {
      });
   }
 
+   function search () {
+     const apiKey = "fc81915063c1c948e13c1b9f6ba1e112";
+     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(submitResponse);
+   }
+  
+   function handleSubmit (event){
+     event.preventDefault();
+     search();
+   }
+
+  function handleCityChange(event){
+     setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
 return (
   <div className="container">
     <div className="weather-app-wrapper">
       <div className="Weather">
         <div className="search-form">
-          <form className="search-bar">
+          <form className="search-bar" onSubmit={handleSubmit}>
             <input
               className="city-input"
               placeholder="Enter your city"
               autoFocus="on"
+              onChange={handleCityChange}
             />
             <button className="search-button">
               <strong className="search-icon">
@@ -79,7 +96,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Feels Like</strong>
                 <br />
-                <FaTemperatureLow /> {" "}
+                <FaTemperatureLow />{" "}
                 <span className="feels_like">
                   {" "}
                   {Math.round(weatherData.feels_like)}°C
@@ -109,7 +126,7 @@ return (
               <div className="p-0.8 border">
                 <strong>Wind</strong>
                 <br />
-                <FaWind /> {" "}
+                <FaWind />{" "}
                 <span className="wind">
                   {Math.round(weatherData.wind)} km/h
                 </span>
@@ -123,35 +140,21 @@ return (
             <span>
               <i className="fa-solid fa-calendar-days fa-sm"></i>
             </span>
-            <FaCalendar /> {" "}
-            6-Day Forecast
+            <FaCalendar /> 6-Day Forecast
           </div>
           <hr />
           <div className="weatherForecast"></div>
         </h3>
       </div>
     </div>
-    <small className="coder">
-      <a
-        href="https://github.com/jerichonina/my-weather-app/tree/main"
-        target="blank"
-      >
-        Open source code{" "}
-      </a>
-      Jericho Li 👩🏻‍💻
-      <div>
-        Animated weather icons designed by{" "}
-        <a href="https://bas.dev" target="blank">
-          Bas Milius.
-        </a>
-      </div>
-    </small>
   </div>
 );
   } else {
-  const apiKey = "fc81915063c1c948e13c1b9f6ba1e112";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(submitResponse);
+  search()
   return "Loading...";
   }
 }
+
+
+ 
+
