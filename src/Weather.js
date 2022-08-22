@@ -7,6 +7,7 @@ import { FaWind } from "react-icons/fa";
 import { FaWater } from "react-icons/fa";
 import { FaCompress } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa";
+import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -25,7 +26,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       feels_like: response.data.main.feels_like,
       pressure: response.data.main.pressure,
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -76,11 +77,9 @@ export default function Weather(props) {
             </h1>
 
             <h2>
-              <img
-                src={weatherData.imgUrl}
-                alt="weather-widget"
-                className="weather-widget"
-              />
+              <div className="weather-icon">
+                <WeatherIcon code={weatherData.icon} />
+              </div>
               <span className="temperature">
                 {Math.round(weatherData.temperature)}
               </span>

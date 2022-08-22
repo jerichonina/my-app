@@ -74,10 +74,10 @@
   margin-top:5px;
 }
 
-.Weather .weather-widget {
+.Weather .weather-icon{
   margin-top: -35px;
   margin-right: -6px;
-   vertical-align: middle;
+   vertical-align:baseline;
   display: inline-block;
   width: 100px;
 }
