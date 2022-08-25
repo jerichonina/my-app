@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
+import WeatherTemperature from "./WeatherTemperature";
 import { FaSistrix } from "react-icons/fa";
 import { FaTemperatureLow } from "react-icons/fa";
 import { FaWind } from "react-icons/fa";
@@ -80,10 +81,7 @@ export default function Weather(props) {
               <div className="weather-icon">
                 <WeatherIcon code={weatherData.icon} />
               </div>
-              <span className="temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-            <span className="celsius-unit">°C </span> 
+              <WeatherTemperature celsius = {weatherData.temperature} />
             </h2>
 
             <div className="weather-details">

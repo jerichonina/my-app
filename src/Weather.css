@@ -93,10 +93,10 @@
   top: -40px;
 }
 
-.Weather .celsius-unit {
-  font-size:24px;
+.Weather .unit {
+  font-size:18px;
   position:relative;
-  top:-33px;
+  top:-42px;
 }
 
 .Weather .weather-details {
