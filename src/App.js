@@ -9,19 +9,13 @@ function App() {
       </header>
       <footer>
         <small className="coder">
+          This is an open source project on {" "}
           <a
-            href="https://github.com/jerichonina/my-weather-app/tree/main"
-            target="blank"
-          >
-            Open source code{" "}
+            href="https://github.com/jerichonina/my-weather-react"
+            target="blank">
+            Github{" "}
           </a>
-          Jericho Li 👩🏻‍💻
-          <div>
-            Animated weather icons designed by{" "}
-            <a href="https://bas.dev" target="blank">
-              Bas Milius.
-            </a>
-          </div>
+          coded by Jericho Li 👩🏻‍💻
         </small>
       </footer>
     </div>
