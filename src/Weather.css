@@ -56,7 +56,7 @@
     sans-serif;
   font-size: 38px;
   color: rgb(73, 52, 52);
-  line-height: 35px;
+  line-height: 30px;
 }
 
 .Weather .weather-description {
@@ -75,22 +75,10 @@
 }
 
 .Weather .weather-icon{
-  margin-top: -35px;
-  margin-right: -6px;
+  margin-right: -8px;
   vertical-align:baseline;
   display: inline-block;
   width: 100px;
-}
-
-.Weather .temperature {
-  font-size: 74px;
-  display:inline-block
-}
-
-.Weather .temperature-icon {
-  position: relative;
-  font-size: 18px;
-  top: -40px;
 }
 
 .Weather .unit {
@@ -101,7 +89,7 @@
 
 .Weather .weather-details {
   padding: 16px;
-  margin-top: -15px;
+  margin-top: -16px;
 }
 
 .Weather .border {
