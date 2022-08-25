@@ -83,12 +83,7 @@ export default function Weather(props) {
               <span className="temperature">
                 {Math.round(weatherData.temperature)}
               </span>
-              <span className="temperature-icon">
-                <span className="celcius-icon">
-                  <a href="/">°C </a>
-                </span>
-                | <a href="/">°F </a>
-              </span>
+            <span className="celsius-unit">°C </span> 
             </h2>
 
             <div className="weather-details">
