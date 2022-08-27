@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 import { FaSistrix } from "react-icons/fa";
 import { FaTemperatureLow } from "react-icons/fa";
 import { FaWind } from "react-icons/fa";
@@ -10,6 +11,7 @@ import { FaCompress } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa";
 import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
+
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -79,7 +81,7 @@ export default function Weather(props) {
 
             <h2>
               <div className="weather-icon">
-                <WeatherIcon code={weatherData.icon} />
+                <WeatherIcon code={weatherData.icon} size={60} />
               </div>
               <WeatherTemperature celsius = {weatherData.temperature} />
             </h2>
@@ -138,6 +140,7 @@ export default function Weather(props) {
               </div>
               <hr />
               <div className="weatherForecast"></div>
+              <WeatherForecast />
             </h3>
           </div>
         </div>

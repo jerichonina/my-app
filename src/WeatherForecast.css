@@ -1,0 +1,13 @@
+.WeatherForecast-daily {
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+
+.WeatherForecast-temperature-max {
+    margin-top: 5px;
+    line-height: 20px;
+}
+.WeatherForecast-temperature-min {
+    opacity:0.6;
+}
+
