@@ -3,6 +3,7 @@ import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecastDaily from "./WeatherForecastDaily";
 
+
 export default function WeatherForecast(props) {
     let [display, setDisplay] = useState(false);
     let [forecast,setForecst] = useState(null);
@@ -10,7 +11,6 @@ export default function WeatherForecast(props) {
     useEffect(() => {
         setDisplay(false);
     }, [props.coordinates]);
-
 
     function submitResponse (response) {
         setForecst(response.data.daily);

@@ -51,100 +51,94 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="container">
-        <div className="weather-app-wrapper">
-          <div className="Weather">
-            <div className="search-form">
-              <form className="search-bar" onSubmit={handleSubmit}>
-                <input
-                  className="city-input"
-                  placeholder="Enter your city"
-                  autoFocus="on"
-                  onChange={handleCityChange}
-                />
-                <button className="search-button">
-                  <strong className="search-icon">
-                    <FaSistrix size="2em" color="grey" />
-                  </strong>
-                </button>
-              </form>
-              <div className="date">
-                <CurrentDate date={weatherData.date} /> (GMT+8)
-              </div>
-            </div>
-
-            <h1>
-              <div className="city">{weatherData.city}</div>
-              <span className="weather-description">
-                {weatherData.description}
-              </span>
-            </h1>
-
-            <h2>
-              <div className="weather-icon">
-                <WeatherIcon code={weatherData.icon} size={60} />
-              </div>
-              <WeatherTemperature celsius = {weatherData.temperature} />
-            </h2>
-
-            <div className="weather-details">
-              <div className="row g-3">
-                <div className="col-6 feels-like-temp">
-                  <div className="p-0.8 border">
-                    <strong>Feels Like</strong>
-                    <br />
-                    <FaTemperatureLow />{" "}
-                    <span className="feels_like">
-                      {" "}
-                      {Math.round(weatherData.feels_like)}°C
-                    </span>
-                  </div>
-                </div>
-
-                <div className="col-6 humidity-level">
-                  <div className="p-0.8 border">
-                    <strong>Humidity</strong>
-                    <br />
-                    <FaWater />
-                    <span className="humidity"> {weatherData.humidity}%</span>
-                  </div>
-                </div>
-
-                <div className="col-6 pressure-index">
-                  <div className="p-0.8 border">
-                    <strong>Pressure</strong>
-                    <br />
-                    <FaCompress />
-                    <span className="pressure"> {weatherData.pressure}</span>
-                  </div>
-                </div>
-
-                <div className="col-6 wind-speed">
-                  <div className="p-0.8 border">
-                    <strong>Wind</strong>
-                    <br />
-                    <FaWind />{" "}
-                    <span className="wind">
-                      {Math.round(weatherData.wind)} km/h
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h3>
-              <div className="forecast-header">
-                <span>
-                  <i className="fa-solid fa-calendar-days fa-sm"></i>
-                </span>
-                <FaCalendar /> 6-Day Forecast
-              </div>
-              <hr />
-              <div className="weatherForecast"></div>
-              <WeatherForecast coordinates = {weatherData.coordindates} />
-            </h3>
+      <div className="Weather">
+        <div className="search-form">
+          <form className="search-bar" onSubmit={handleSubmit}>
+            <input
+              className="city-input"
+              placeholder="Enter your city"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
+            <button className="search-button">
+              <strong className="search-icon">
+                <FaSistrix size="2em" color="grey" />
+              </strong>
+            </button>
+          </form>
+          <div className="date">
+            <CurrentDate date={weatherData.date} /> (GMT+8)
           </div>
         </div>
+
+        <h1>
+          <div className="city">{weatherData.city}</div>
+          <div className="weather-description">{weatherData.description}</div>
+        </h1>
+
+        <h2>
+          <div className="weather-icon">
+            <WeatherIcon code={weatherData.icon} size={60} />
+          </div>
+          <WeatherTemperature celsius={weatherData.temperature} />
+        </h2>
+
+        <div className="weather-details">
+          <div className="row g-3">
+            <div className="col-6 feels-like-temp">
+              <div className="p-0.8 border">
+                <strong>Feels Like</strong>
+                <br />
+                <FaTemperatureLow />{" "}
+                <span className="feels_like">
+                  {" "}
+                  {Math.round(weatherData.feels_like)}°
+                </span>
+              </div>
+            </div>
+
+            <div className="col-6 humidity-level">
+              <div className="p-0.8 border">
+                <strong>Humidity</strong>
+                <br />
+                <FaWater />
+                <span className="humidity"> {weatherData.humidity}%</span>
+              </div>
+            </div>
+
+            <div className="col-6 pressure-index">
+              <div className="p-0.8 border">
+                <strong>Pressure</strong>
+                <br />
+                <FaCompress />
+                <span className="pressure"> {weatherData.pressure}</span>
+              </div>
+            </div>
+
+            <div className="col-6 wind-speed">
+              <div className="p-0.8 border">
+                <strong>Wind</strong>
+                <br />
+                <FaWind />{" "}
+                <span className="wind">
+                  {Math.round(weatherData.wind)} km/h
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>
+          <div className="forecast-header">
+            <span>
+              <i className="fa-solid fa-calendar-days fa-sm"></i>
+            </span>
+            <FaCalendar /> 5-Day Forecast
+          </div>
+            <hr />
+          <span className="weatherForecast"></span>
+          <WeatherForecast coordinates={weatherData.coordindates} />
+        </h3>
       </div>
     );
   } else {
