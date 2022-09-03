@@ -1,14 +1,14 @@
 .WeatherApp {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/296/original/Loading_Happiness.gif?1662183365");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/362/original/Untitled_design_%281%29.gif?1662224311");
   background-size: 1500px;
-  padding: 12px;
+  padding: 16px;
   text-align: center;
 }
 
 .coder {
-  margin-top: 8px;
+  margin-bottom: 18px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(40, 30, 30);
-  font-size:16px;
+  color: rgb(223, 213, 213);
+  font-size:18px;
 }
 

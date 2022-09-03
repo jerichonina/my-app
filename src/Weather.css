@@ -1,9 +1,9 @@
 .Weather {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/174/original/colorlayers.png?1653453527");
-  background-size: 400px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/045/327/original/Yellow_Simple_Movie_Review_Instagram_Story.png?1662216976");
+  background-size:400px;
   width:400px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid rgb(219, 216, 216);
   border-radius: 10px;
 }
@@ -13,6 +13,8 @@
   border: 0.9px solid rgb(90, 87, 87);
   border-radius: 200px;
   margin-bottom: 5px;
+  margin-left: 42px;
+  margin-right: 42px;
 }
 
 .Weather .city-input {
@@ -85,6 +87,8 @@
 
 .Weather .weather-details {
   padding: 22px;
+  margin-left:22px;
+  margin-right:22px;
 }
 
 .Weather .border {
@@ -100,7 +104,6 @@
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(73, 52, 52);
-  
 }
 
 .Weather .forecast-header {
@@ -108,14 +111,15 @@
   text-align: left;
   font-size: 13px;
   color: #5d626b;
-  margin-left: 5px;
 }
 
 .Weather h3 {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #5d626b;
+  margin-left:40px;
+  margin-right:40px;
 }
 
 .Weather .weatherForecast {
