@@ -7,8 +7,9 @@
 
 .coder {
   margin-bottom: 18px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(223, 213, 213);
-  font-size:18px;
+  margin-top: 5px;
+  font-family:monospace;
+  color: rgb(245, 235, 235);
+  font-size:14px;
 }
 

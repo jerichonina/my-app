@@ -6,8 +6,8 @@ import WeatherForecast from "./WeatherForecast";
 import { FaSistrix } from "react-icons/fa";
 import { FaTemperatureLow } from "react-icons/fa";
 import { FaWind } from "react-icons/fa";
-import { FaWater } from "react-icons/fa";
-import { FaCompress } from "react-icons/fa";
+import { FaTint } from "react-icons/fa";
+import { FaTired } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa";
 import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
@@ -101,7 +101,7 @@ export default function Weather(props) {
               <div className="p-0.8 border">
                 <strong>Humidity</strong>
                 <br />
-                <FaWater />
+                <FaTint />
                 <span className="humidity"> {weatherData.humidity}%</span>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Weather(props) {
               <div className="p-0.8 border">
                 <strong>Pressure</strong>
                 <br />
-                <FaCompress />
+                <FaTired />
                 <span className="pressure"> {weatherData.pressure}</span>
               </div>
             </div>

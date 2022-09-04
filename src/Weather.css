@@ -23,9 +23,8 @@
   background-color: transparent;
   padding: 0.5rem 0 0.75rem 0.75rem;
   outline: none;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:fantasy;
   font-size: 16px;
-  font-style: italic;
   color: rgb(78, 59, 59);
 }
 
@@ -45,14 +44,14 @@
 .Weather .date {
   text-align: center;
   font-size: 14px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:fantasy;
   color: rgb(100, 84, 84);
 }
 
 .Weather h1 {
-  margin:12px auto;
+  margin:10px 0;
   text-align: center;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:cursive;
   font-size: 38px;
   color: rgb(73, 52, 52);
   
@@ -63,6 +62,7 @@
   text-transform: capitalize;
   opacity: 0.8;
   margin-bottom: 22px;
+  margin-top: 8px;
 }
 
 .Weather h2 {
@@ -93,7 +93,7 @@
 
 .Weather .border {
   border-radius: 65px;
-  box-shadow: 1.5px 1px 1px rgb(37, 36, 36);
+  box-shadow: 1.5px 1.2px 1.2px rgb(44, 42, 42);
 }
 
 .Weather .feels-like-temp,
@@ -111,12 +111,13 @@
   text-align: left;
   font-size: 13px;
   color: #5d626b;
+  margin-bottom: -5px;
 }
 
 .Weather h3 {
   text-align: center;
-  font-size: 13px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-family:cursive;
   color: #5d626b;
   margin-left:40px;
   margin-right:40px;
